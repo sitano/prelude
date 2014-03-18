@@ -24,7 +24,7 @@
 (show-paren-mode 1)
 
 ;; Show when lines exceed fill column
-(prelude-require-packages '(whitespace))
+(setq whitespace-style '(face tabs spaces trailing lines space-before-tab newline indentation empty space-after-tab space-mark tab-mark newline-mark))
 (setq whitespace-line-column 120)
 
 ;; Show line numbers
@@ -68,8 +68,8 @@
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 
 ;; Terminator style window splitting
-(global-set-key (kbd "C-S-o") 'split-window-below)
-(global-set-key (kbd "C-S-e") 'split-window-right)
+;; (global-set-key (kbd "C-S-o") 'split-window-below)
+;; (global-set-key (kbd "C-S-e") 'split-window-right)
 
 ;; C-SPC is easier than M-/
 ;; (global-set-key (kbd "C-SPC") 'hippie-expand)
