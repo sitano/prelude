@@ -34,6 +34,7 @@
 ;;; Code:
 (require 'cl)
 (require 'package)
+(require 'prelude-packages-get)
 
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -66,7 +67,7 @@
   (unless (memq package prelude-packages)
     (add-to-list 'prelude-packages package))
   (unless (package-installed-p package)
-    (package-install package)))
+    (el-get-install package)))
 
 (defun prelude-require-packages (packages)
   "Ensure PACKAGES are installed.
