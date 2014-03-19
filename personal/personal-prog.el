@@ -10,6 +10,13 @@
 ;; YASnippet magic!
 (yas-reload-all)
 
+; Auto complete
+(require 'auto-complete-config)
+(ac-config-default)
+
+; Flymake
+(setq flymake-log-level 3)
+
 (defun personal-prog-mode-defaults ()
   "Personal default coding hook."
   ;; For God's sake indent when I press return.

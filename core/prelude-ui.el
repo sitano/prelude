@@ -47,7 +47,7 @@
 ;; disable startup screen
 (setq inhibit-startup-screen t)
 
-;; nice scrolling
+;; Nice scrolling
 (setq scroll-margin 0
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
