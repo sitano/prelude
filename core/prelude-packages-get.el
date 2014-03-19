@@ -31,6 +31,8 @@
 
 (setq el-get-dir (concat (file-name-as-directory user-emacs-directory) "elpa/el-get"))
 
+(setq el-get-user-package-directory (concat (file-name-as-directory prelude-personal-dir) "el-get/init/"))
+
 (let ((el-get-install-dir (concat (file-name-as-directory el-get-dir) "el-get")))
   (unless (member el-get-install-dir load-path)
     (add-to-list 'load-path el-get-install-dir)))
@@ -40,12 +42,14 @@
       (url-retrieve-synchronously
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
-    (eval-print-last-sexp)))
+    (eval-print-last-sexp))
+    (setq el-get-first t))
 
-(let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-personal-dir) "el-get/recipes")))
-  (unless (member el-get-recipe-path el-get-user-recipe-path)
-    (add-to-list 'el-get-recipe-path el-get-recipe-path)
-    (el-get 'sync)))
+(let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-personal-dir) "el-get/recipes/")))
+  (unless (member el-get-user-recipe-path el-get-recipe-path)
+    (add-to-list 'el-get-recipe-path el-get-user-recipe-path)))
+
+(if (boundp 'el-get-first) (el-get 'sync))
 
 (setq el-get-verbose t)
 
