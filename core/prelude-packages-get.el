@@ -37,21 +37,33 @@
   (unless (member el-get-install-dir load-path)
     (add-to-list 'load-path el-get-install-dir)))
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp))
-    (setq el-get-first t))
+(defun prelude-require-el-get ()
+  "Lazy el-get initialization."
+  (unless (require 'el-get nil 'noerror)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
 
-(let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-personal-dir) "el-get/recipes/")))
-  (unless (member el-get-user-recipe-path el-get-recipe-path)
-    (add-to-list 'el-get-recipe-path el-get-user-recipe-path)))
+  (let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-personal-dir) "el-get/recipes/")))
+    (unless (member el-get-user-recipe-path el-get-recipe-path)
+      (add-to-list 'el-get-recipe-path el-get-user-recipe-path)))
 
-(if (boundp 'el-get-first) (el-get 'sync))
+  (setq el-get-verbose t)
+  (el-get 'sync))
 
-(setq el-get-verbose t)
+(prelude-require-el-get)
+
+(defun prelude-el-get-require-package (package)
+  "Install PACKAGE unless already installed."
+  (unless (el-get-package-installed-p package)
+    (el-get-install package)))
+
+(defun prelude-el-get-require-packages (packages)
+  "Ensure PACKAGES are installed.
+Missing packages are installed automatically."
+  (mapc #'prelude-el-get-require-package packages))
 
 (provide 'prelude-packages-get)
 ;;; prelude-packages-get.el ends here

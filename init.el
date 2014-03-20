@@ -93,7 +93,9 @@ by Prelude.")
 (message "Loading Prelude's core...")
 
 ;; the core stuff
+(require 'prelude-packages-archives)
 (require 'prelude-packages)
+(require 'prelude-packages-get)
 (require 'prelude-ui)
 (require 'prelude-core)
 (require 'prelude-mode)

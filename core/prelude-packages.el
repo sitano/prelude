@@ -34,17 +34,6 @@
 ;;; Code:
 (require 'cl)
 (require 'package)
-(require 'prelude-packages-get)
-
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
-;; set package-user-dir to be relative to Prelude install path
-(setq package-user-dir (expand-file-name "elpa" prelude-dir))
-(package-initialize)
 
 (defvar prelude-packages
   '(ace-jump-mode ack-and-a-half anzu
@@ -67,7 +56,7 @@
   (unless (memq package prelude-packages)
     (add-to-list 'prelude-packages package))
   (unless (package-installed-p package)
-    (el-get-install package)))
+    (package-install package)))
 
 (defun prelude-require-packages (packages)
   "Ensure PACKAGES are installed.
