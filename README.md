@@ -15,8 +15,9 @@ advised to always run Prelude with the latest Emacs - currently
 Features of this fork:
 =============
 - soft integration of el-get package management system (pull from github your packages)
-- prelude-go.el module - golang for prelude
-- distel into erl module
+- go module - golang for prelude
+- puppet/chef modules
+- distel (may be)
 - auto-complete / flymake / flycheck by def in prog module
 
 **Table of Contents**

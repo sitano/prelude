@@ -1,0 +1,5 @@
+(:name chef-mode
+       :type github
+       :pkgname "mpasternacki/chef-mode"
+       :description "Chef-mode is an Emacs minor mode to make editing Opscode Chef repositories easier."
+       :depends (packed))

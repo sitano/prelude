@@ -40,7 +40,7 @@
 
 ;; Duplicate things
 (prelude-require-packages '(duplicate-thing))
-(global-set-key (kbd "M-d") 'dublicate-thing)
+(global-set-key (kbd "M-d") (lambda () (interactive) (duplicate-thing 1)))
 
 ;; Backup files
 (setq make-backup-files nil)
