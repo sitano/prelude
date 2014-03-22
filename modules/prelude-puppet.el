@@ -20,6 +20,7 @@
 ;;; Code:
 (require 'prelude-programming)
 (prelude-require-packages '(puppet-mode flymake-puppet))
+; (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
 
 (provide 'prelude-puppet)
 ;;; prelude-puppet.el ends here
