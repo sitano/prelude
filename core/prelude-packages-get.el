@@ -31,6 +31,8 @@
 
 (setq el-get-default-process-sync t)
 
+(setq el-get-is-lazy t)
+
 (setq el-get-dir (concat (file-name-as-directory user-emacs-directory) "elpa/el-get"))
 
 (setq el-get-user-package-directory (concat (file-name-as-directory prelude-vendor-dir) "el-get/init/"))

@@ -36,10 +36,13 @@
 
 (prelude-el-get-require-packages '(auto-complete flymake flycheck))
 
-(setq flymake-log-level 3)
+(require 'auto-complete-config)
+(ac-config-default)
 
-; el-get/init/init-auto-complete.el: (require 'auto-complete-config)
-; el-get/init/init-auto-complete.el: (ac-config-default)
+(require 'flymake)
+(require 'flycheck)
+
+(setq flymake-log-level 3)
 
 (defun prelude-ido-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
