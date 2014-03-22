@@ -10,6 +10,9 @@
 ;; Basic libraries - Fix environment
 (prelude-require-packages '(exec-path-from-shell))
 
+;; Check spelling
+(prelude-require-package 'flyspell)
+
 ;; Allow arrow keys
 (setq guru-warn-only t)
 

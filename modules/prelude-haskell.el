@@ -33,7 +33,7 @@
 ;;; Code:
 
 (require 'prelude-programming)
-(prelude-require-packages '(haskell-mode))
+(prelude-require-packages '(haskell-mode flycheck-haskell flymake-haskell-multi))
 
 (eval-after-load 'haskell-mode
   '(progn
