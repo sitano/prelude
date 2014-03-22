@@ -2,20 +2,18 @@
 ;;; Commentary:
 ;;; Code:
 
-(prelude-require-packages '(smartparens yasnippet auto-complete flymake flycheck))
+; (prelude-el-get-require-packages '(auto-complete flymake flycheck))
+; (setq flymake-log-level 3)
+; el-get/init/init-auto-complete.el: (require 'auto-complete-config)
+; el-get/init/init-auto-complete.el: (ac-config-default)
+
+(prelude-el-get-require-packages '(smartparens yasnippet))
 
 (require 'smartparens)
 (require 'yasnippet)
 
 ;; YASnippet magic!
 (yas-reload-all)
-
-; Auto complete
-(require 'auto-complete-config)
-(ac-config-default)
-
-; Flymake
-(setq flymake-log-level 3)
 
 (defun personal-prog-mode-defaults ()
   "Personal default coding hook."

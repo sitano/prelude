@@ -29,9 +29,11 @@
 
 ;;; Code:
 
+(setq el-get-default-process-sync t)
+
 (setq el-get-dir (concat (file-name-as-directory user-emacs-directory) "elpa/el-get"))
 
-(setq el-get-user-package-directory (concat (file-name-as-directory prelude-personal-dir) "el-get/init/"))
+(setq el-get-user-package-directory (concat (file-name-as-directory prelude-vendor-dir) "el-get/init/"))
 
 (let ((el-get-install-dir (concat (file-name-as-directory el-get-dir) "el-get")))
   (unless (member el-get-install-dir load-path)
@@ -46,7 +48,7 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
 
-  (let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-personal-dir) "el-get/recipes/")))
+  (let ((el-get-user-recipe-path (concat (file-name-as-directory prelude-vendor-dir) "el-get/recipes/")))
     (unless (member el-get-user-recipe-path el-get-recipe-path)
       (add-to-list 'el-get-recipe-path el-get-user-recipe-path)))
 

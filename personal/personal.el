@@ -33,9 +33,13 @@
 
 ;; Windows numbers
 (prelude-require-packages '(window-numbering))
-;; (window-number-mode 1)
+(window-numbering-mode 1)
 
-;; No backup files
+;; Duplicate things
+(prelude-require-packages '(duplicate-thing))
+(global-set-key (kbd "M-d") 'dublicate-thing)
+
+;; Backup files
 (setq make-backup-files nil)
 
 ;; Save place in closed files
