@@ -62,7 +62,9 @@
 (defun prelude-el-get-require-package (package)
   "Install PACKAGE unless already installed."
   (unless (el-get-package-installed-p package)
-    (el-get-install package)))
+    (el-get-install package))
+  ; Mirror ELPA behaviour
+  (require package nil t))
 
 (defun prelude-el-get-require-packages (packages)
   "Ensure PACKAGES are installed.

@@ -28,8 +28,6 @@
 (require 'go-flymake)
 (require 'go-flycheck)
 
-(require 'go-autocomplete)
-
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
 (add-hook 'go-mode-hook 'go-eldoc-setup)

@@ -39,9 +39,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-(require 'flymake)
-(require 'flycheck)
-
 (setq flymake-log-level 3)
 
 (defun prelude-ido-goto-symbol (&optional symbol-list)

@@ -9,9 +9,6 @@
 
 (prelude-el-get-require-packages '(smartparens yasnippet))
 
-(require 'smartparens)
-(require 'yasnippet)
-
 ;; YASnippet magic!
 (yas-reload-all)
 
