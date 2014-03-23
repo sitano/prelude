@@ -16,6 +16,7 @@
 ;; (require 'prelude-go)
 ;; (require 'prelude-puppet)
 ;; (require 'prelude-chef)
+;; (require 'prelude-dlang)
 ;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
 ;; (require 'prelude-latex)
 (require 'prelude-lisp)

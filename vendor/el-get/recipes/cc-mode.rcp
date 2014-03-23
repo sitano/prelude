@@ -1,0 +1,9 @@
+(:name cc-mode
+       :pkgname "cc-mode/cc-mode"
+       :website "http://cc-mode.sourceforge.net"
+       :description "CC Mode is an Emacs and XEmacs mode for editing C and other languages with similar syntax; currently C++, Objective-C, Java, CORBA's IDL, Pike, and AWK. It's a standard package in both Emacs and XEmacs."
+       :type hg
+       :url "http://hg.code.sf.net/p/cc-mode/cc-mode"
+       :branch "Branch_5_32"
+       :compile "."
+       :features (cc-mode))

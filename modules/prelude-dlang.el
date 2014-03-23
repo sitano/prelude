@@ -1,4 +1,4 @@
-;;; prelude-puppet.el --- puppet mode prelude module
+;;; prelude-dlang.el --- dlang prelude module
 
 ;; Copyright (C) 2014  Ivan Prisyazhniy
 
@@ -18,9 +18,14 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Code:
-(require 'prelude-programming)
-(prelude-require-packages '(puppet-mode flymake-puppet))
-; (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
 
-(provide 'prelude-puppet)
-;;; prelude-puppet.el ends here
+(require 'prelude-programming)
+(prelude-el-get-require-packages '(cc-mode d-mode))
+
+(eval-after-load 'd-mode
+  '(progn
+     (autoload 'd-mode "d-mode" "Major mode for editing D code." t)
+     (add-to-list 'auto-mode-alist '("\\.d[i]?\\'" . d-mode))))
+
+(provide 'prelude-dlang)
+;;; prelude-dlang.el ends here

@@ -16,7 +16,8 @@ Features of this fork:
 =============
 - soft integration of el-get package management system (pull from github your packages)
 - go module - golang for prelude
-- puppet/chef modules
+- cc-mode recipe, dlang mode module
+- puppet, chef modules
 - distel (may be)
 - auto-complete / flymake / flycheck by def in prog module
 

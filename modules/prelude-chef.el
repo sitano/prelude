@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2014  Ivan Prisyazhniy
 
-;; Author: Ivan Prisyazhniy <sitano@Ivans-MacBook-Air.local>
+;; Author: Ivan Prisyazhniy <john.koepi@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

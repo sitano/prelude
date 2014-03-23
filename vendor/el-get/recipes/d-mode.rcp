@@ -1,0 +1,6 @@
+(:name d-mode
+       :type github
+       :pkgname "Emacs-D-Mode-Maintainers/Emacs-D-Mode"
+       :description "An Emacs mode for D code."
+       :depends (cc-mode)
+       :features (d-mode))
