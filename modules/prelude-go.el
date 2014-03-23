@@ -22,7 +22,7 @@
 
 (require 'prelude-programming)
 
-(prelude-el-get-require-packages '(go-mode go-flymake go-autocomplete))
+(prelude-el-get-require-packages '(go-mode go-flymake go-autocomplete go-eldoc go-def go-lint))
 
 (require 'go-flycheck)
 
