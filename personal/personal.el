@@ -10,6 +10,13 @@
 ;; Basic libraries - Fix environment
 (prelude-require-packages '(exec-path-from-shell))
 
+;; UI improvements
+(prelude-require-packages '(diminish                  ; De-clutter the mode line…
+                            smart-mode-line           ; …and make it fancy
+                            anzu                      ; Mode line indicators for isearch
+                            browse-kill-ring          ; Kill ring browser
+                            smex))                    ; Improved M-x
+
 ;; Check spelling
 (prelude-require-package 'flyspell)
 
